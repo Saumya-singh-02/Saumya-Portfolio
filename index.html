@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saumya's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Borel&family=Poppins:ital,wght@0,600;1,400&family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: azure;
+        color: rgb(27, 21, 13);
+        font-family: "Poppins", sans-serif;
+      }
+      body header {
+        /* background-color: #333; */
+        color: rgb(243, 245, 204);
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 5%;
+        background-color: #333;
+        height: 15vh;
+      }
+      nav ul {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 20px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: antiquewhite;
+      }
+      nav ul li a:hover {
+        color: coral;
+        font-size: 1.2rem;
+      }
+      .left {
+        font-size: 2rem;
+      }
+      .star {
+        color: darkcyan;
+      }
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        margin: 70px 0;
+        align-items: center;
+      }
+      .firstSection > div {
+        width: 30%;
+      }
+      .leftSection {
+        font-size: 1.9rem;
+        margin: 50px 0px;
+      }
+      .rightSection {
+        width: 80%;
+      }
+
+      .rightSection img {
+        width: 100%;
+        height: 80%;
+      }
+      #element {
+        color: darkcyan;
+      }
+      .secondSection {
+        max-width: 80vw;
+        margin: auto;
+      }
+      main hr {
+        border: 0;
+        background: rgb(27, 21, 13);
+        height: 10px;
+        margin: 40px 84px;
+      }
+      .secondSection h1 {
+        font-size: 2.5rem;
+        margin: 40px 0;
+      }
+      .secondSection box {
+        background: wheat;
+        width: 80vw;
+        height: 2px;
+        margin: 50px 0;
+        display: flex;
+      }
+
+      .secondSection .vertical {
+        height: 93px;
+        width: 1px;
+        background-color: #414141;
+        margin: 0 100px;
+      }
+
+      .footer {
+        position: relative;
+        margin-top: 45px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .footer .container-fluid {
+        padding: 60px 0 0 0;
+      }
+
+      .footer .footer-info {
+        font-size: x-small;
+        color: lightslategray;
+        position: center;
+        color: lightslategray;
+      }
+
+      .footer .copyright {
+        position: relative;
+        text-align: center;
+        /* margin-top: 30px; */
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+
+      .footer .copyright::before {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 1px;
+        top: 0;
+        left: 25%;
+        background: rgba(256, 256, 256, 0.2);
+      }
+
+      .footer .copyright p {
+        margin: 0;
+        color: rgb(19, 14, 14);
+      }
+
+      .footer .copyright .col-md-6:last-child p {
+        text-align: right;
+      }
+
+      .footer .copyright p a {
+        color: rgb(19, 14, 14);
+        font-weight: 600;
+      }
+
+      .footer .copyright p a:hover {
+        color: #414141;
+      }
+
+      .aboutm {
+        letter-spacing: 10px;
+        display: block;
+        color: darkcyan;
+      }
+
+      .coll {
+        margin-right: 1rem;
+        padding-right: 5rem;
+      }
+
+      .colr {
+        margin-top: 2.5rem;
+        padding-right: 2rem;
+      }
+
+      .img-fluid {
+        width: 420px;
+        height: 420px;
+      }
+
+      .para {
+        text-align: justify;
+        justify-content: center;
+      }
+
+      .btn {
+        padding: 0.8rem 2.2rem;
+        font: normal 500 16px/20px;
+        position: relative;
+        border: 3px solid transparent;
+        border-radius: 4px;
+        margin-top: 0.3rem;
+      }
+
+      .btn.primary-button {
+        background: darkcyan;
+        background-clip: padding-box;
+        color: whitesmoke;
+        transition: 0.6s ease;
+      }
+
+      .btn.primary-button:hover {
+        background: whitesmoke;
+        background-clip: padding-box;
+        color: black;
+      }
+
+      .btn.primary-button::after,
+      .btn.secondary-button::after {
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        bottom: -2px;
+        right: -2px;
+        content: "";
+        background: darkblue;
+        z-index: -1;
+        border-radius: 4px;
+      }
+
+      .btn.secondary-button {
+        background: white;
+        background-clip: padding-box;
+        transition: 0.6s ease;
+        text-decoration: none;
+      }
+
+      .btn.secondary-button a {
+        text-decoration: none;
+      }
+
+      .btn.secondary-button:hover {
+        background: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+        color: whitesmoke;
+        box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+      }
+
+      .text-uppercase {
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="left">Saumya Singh</div>
+        <div class="right">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="skills.html">Skills</a>
+            </li>
+            <li>
+              <a href="projects.html">Projects</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi, My name is
+          <span class="star">Saumya ✨</span>.
+          <div>I am a</div>
+          <!-- <div>
+                    Web developer.
+                </div>          -->
+          <span id="element"></span>
+        </div>
+        <div class="rightSection">
+          <img src="12.png" alt="image" />
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="secondSection">
+        <!-- <h1></h1> -->
+        <!-- <div class="about-text">
+            <p>
+              Experienced Software Developer interested in Web
+              Development.Along with my technical skill sets, I possess
+              clear verbal and written communication skills and in due time,
+              am capable enough to do the assigned presentation and solve
+              problems. I am always eager to learn more and improve my
+              skills in various aspects of my career along with the
+              organization.
+            </p>
+          </div> -->
+        <!-- <hr>
+        <div class="box">
+            <div class="vertical"></div>
+            <div class="vertical"></div>
+            <div class="vertical"></div>
+            <div class="vertical"></div>
+        </div>
+ -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="coll">
+              <!-- <div class="about-image">
+                    <img src="images/about.png" alt="About-Me" class="img-fluid" /> 
+                </div> -->
+            </div>
+            <div class="colr">
+              <h2 class="text-uppercase pt-5" id="s1">
+                <span class="aboutm">About Me</span>
+              </h2>
+              <div class="paragraph py-3 w-70">
+                <p class="para">
+                  I'm Saumya Singh. Currently pursuing undergraduate in As a
+                  B.Tech. in Electronics and Communication Engineering at IIIT
+                  Naya Raipur. I love problem-solving and Data Structures and
+                  Algorithms in C++. I am familiar with technologies and
+                  concepts such as HTML, CSS, Bootstrap, OOPs, SQL, JavaScript,
+                  CS Fundamentals, etc.<br />
+                </p>
+                <br />
+                <p class="para" id="para1">
+                  I am a Front-End Web Developer. I love to organise events and
+                  manage teams. I am a speaker and writer. I got the opprtunity
+                  to hold position of responsibilites such as being school
+                  captian and being a lead in Student Activity Center at IIIT
+                  Naya Raipur.
+                </p>
+                <br />
+              </div>
+              <a href="resume.jpg" target="_blank" style="text-decoration: none"
+                ><button
+                  type="button"
+                  class="btn primary-button mr-4 text-uppercase"
+                >
+                  See Resume
+                </button></a
+              >
+              <a
+                href="https://github.com/Saumya-singh-02"
+                target="_top"
+                style="text-decoration: none"
+                ><button
+                  type="button"
+                  class="btn secondary-button text-uppercase"
+                >
+                  Visit GitHub
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+
+      <section class="thirdSection"></section>
+      <br />
+    </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "<i>Web developer.</i> ",
+          "Coder Girl.",
+          "Leader.",
+          "Content Writer",
+          "Learner.",
+          "Designer.",
+        ],
+        typeSpeed: 50,
+      });
+    </script>
+    <link href="/favicon/favicon.ico" rel="icon" />
+
+    <div class="footer">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="footer-info">
+            <!-- <h2><a
+                href="mailto:saumya20101@iiitnr.edu.in">Contact</a></h2> -->
+            <h3>New Delhi, India</h3>
+          </div>
+        </div>
+        <div class="container copyright">
+          <p>&copy; <a href="#">Saumya Singh</a>, All Right Reserved</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
